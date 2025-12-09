@@ -42,16 +42,16 @@ INSTALLED_APPS = [
     'django_filters',
 
     #apps
-    'administrator',
-    'cart',
-    'catalog',
-    'common',
-    'favorites',
-    'orders',
-    'promotion',
-    'review',
-    'seller',
-    'user',
+    'apps.administrator',
+    'apps.cart',
+    'apps.catalog',
+    'apps.common',
+    'apps.favorites',
+    'apps.orders',
+    'apps.promotion',
+    'apps.review',
+    'apps.seller',
+    'apps.user',
 ]
 
 MIDDLEWARE = [

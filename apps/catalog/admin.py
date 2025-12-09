@@ -77,6 +77,6 @@ class VariantAttributeValueAdmin(admin.ModelAdmin):
 
 @admin.register(ProductVariantImage)
 class ProductVariantImageAdmin(admin.ModelAdmin):
-    list_display = ("id", "variant", "is_main", "created_at")
-    list_filter = ("is_main", "variant")
+    list_display = ("id", "is_main", "created_at")
+    list_filter = ("is_main",)
 

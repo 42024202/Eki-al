@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +36,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #library
+    'rest_framework',
+    'django_filters',
+
+    #apps
+    'administrator',
+    'cart',
+    'catalog',
+    'common',
+    'favorites',
+    'orders',
+    'promotion',
+    'review',
+    'seller',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +94,9 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend']}
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from catalog.models import Product
-from catalog.api.v1.serializers.product import (
+from catalog.serializers.product import (
     ProductSerializer,
     ProductCreateSerializer
 )

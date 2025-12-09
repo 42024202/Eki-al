@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from catalog.models import category_attribute
-from catalog.models import (
+from apps.catalog.models import category_attribute
+from apps.catalog.models import (
         Product, ProductImage,
         ProductAttributeValue, CategoryAttribute,
         CategoryAttributeChoice)

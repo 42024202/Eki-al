@@ -1,5 +1,6 @@
 from .category import Category
 from .category_attribute import CategoryAttribute
+from .category_attribute_choice import CategoryAttributeChoice
 from .product import Product
 from .product_image import ProductImage
 from .product_attribute_value import ProductAttributeValue

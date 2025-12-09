@@ -33,7 +33,7 @@ class CategoryAttribute(models.Model):
         default=False,
         verbose_name="Обязательный атрибут для товара")
 
-    is_filterble = models.BooleanField(
+    is_filterable = models.BooleanField(
         default=False,
         verbose_name="Фильтр для товара")
 

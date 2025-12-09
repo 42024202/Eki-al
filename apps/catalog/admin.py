@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import (
-    Brand, Category,
+    Brand, Category, CategoryAttributeChoice,
     CategoryAttribute,Product,ProductImage,
     ProductAttributeValue,ProductVariant,
     VariantAttributeValue,ProductVariantImage,)
@@ -47,6 +47,11 @@ class CategoryAttributeAdmin(admin.ModelAdmin):
     search_fields = ("name", "title")
 
 
+@admin.register(CategoryAttributeChoice)
+class CategoryAttributeChoiceAdmin(admin.ModelAdmin):
+    list_display = ("id", "attribute", "value")
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "brand", "category", "is_active", "created_at")
@@ -79,4 +84,5 @@ class VariantAttributeValueAdmin(admin.ModelAdmin):
 class ProductVariantImageAdmin(admin.ModelAdmin):
     list_display = ("id", "is_main", "created_at")
     list_filter = ("is_main",)
+
 

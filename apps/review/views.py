@@ -9,7 +9,10 @@ class ReviewListCreateView(generics.ListCreateAPIView):
 
     def get_serializer_class(self):
         if self.request.method == 'POST':
-            return ReviewSerializer
+            serializer_class = ReviewSerializer
+        else:
+            serializer_class = ReviewSerializer
+        return serializer_class
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

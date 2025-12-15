@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions
-from .models import Review
-from .serializers import ReviewSerializer, ReviewCreateSerializer
+from apps.review.models import Review
+from apps.review.serializers import ReviewSerializer
 
 
 class ReviewListCreateView(generics.ListCreateAPIView):
@@ -9,8 +9,7 @@ class ReviewListCreateView(generics.ListCreateAPIView):
 
     def get_serializer_class(self):
         if self.request.method == 'POST':
-            return ReviewCreateSerializer
-        return ReviewSerializer
+            return ReviewSerializer
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

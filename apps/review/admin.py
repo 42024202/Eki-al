@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Review, ReviewImage
+from apps.review.models import Review, ReviewImage
 
 
 
